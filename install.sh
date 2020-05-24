@@ -6,7 +6,7 @@ username=whoami
 obas=$HOME/OBAS
 
 install_essentials () {
-	while IFS= read -r ess; do echo "$ess"; done < essentials.txt
+	while IFS= read -r ess; do echo "$ess"; done < $obas/essentials.txt
 	for item in ${$ess[*]}
 	do
 		sudo apt-get install $ess -yy > /dev/null
@@ -18,7 +18,7 @@ install_extras () {
 	sudo add-apt-repository ppa:libretro/stable -y >/dev/null
 	sudo apt-get update -yy > /dev/null
 
-	while IFS= read -r extras; do echo "$extras"; done < extras.txt
+	while IFS= read -r extras; do echo "$extras"; done < $obas/extras.txt
 
 	for item in ${$extras[*]}
 	do
@@ -58,7 +58,7 @@ sudo apt-get update -yy > /dev/null
 
 let "stage++"
 echo -e "\e[32mInstalling Openbox\e[0m"
-while IFS= read -r opbx; do echo "$opbx"; done < openbox.txt
+while IFS= read -r opbx; do echo "$opbx"; done < $obas/openbox.txt
 	
 	sudo apt-get install software-properties-common -yy > /dev/null
 	sudo add-apt-repository ppa:mmstick76/alacritty
