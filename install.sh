@@ -35,6 +35,9 @@ install_extras () {
 
 	echo "steam &" >> $HOME/.config/openbox/autostart
 	echo "discord &" >> $HOME/.config/openbox/autostart
+	
+	sudo adduser $USER libvirt
+	sudo adduser $USER libvirt-qemu
 }
 
 
