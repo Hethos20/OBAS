@@ -1,0 +1,43 @@
+#rofi
+alt + F2
+	rofi -show run
+
+#terminal
+alt + t
+	alacritty
+
+#file manager
+super + e
+	pcmanfm
+
+#whisker menu
+alt + F1
+	xfce4-popup-whiskermenu 
+
+#Mute audio
+XF86AudioMute
+	amixer -q -D pulse sset Master toggle
+
+#Raise volume by 5
+XF86AudioRaiseVolume 
+	amixer -q -D pulse sset Master 5%+
+
+#Lower volume by 5
+XF86AudioLowerVolume 
+	amixer -q -D pulse sset Master 5%-
+
+#Screenshot
+Print
+	flameshot gui
+
+#Email client
+XF86Mail
+	thunderbird
+
+#Help menu
+alt + F12
+	zathura $HOME/Documents/help.pdf
+
+#Power menu
+alt + ctrl + Delete
+	power.sh

@@ -1,0 +1,17 @@
+# start panel
+xfce4-panel &
+
+# start network panel
+nm-applet &
+
+# start compton
+compton &
+
+# start sxhkd
+sxhkd $HOME/.config/sxhkd/sxhkdrc &
+
+# Set wallpaper
+feh --bg-center $HOME/Pictures/Wallpapers/green_wallpaper.jpg
+
+# start flameshot
+flameshot &

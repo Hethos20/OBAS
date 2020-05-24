@@ -1,0 +1,9 @@
+libreoffice
+arandr
+kcalc
+leafpad
+gimp
+transmission
+thunderbird
+qmmp
+mpv
