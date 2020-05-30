@@ -6,7 +6,7 @@ retroarch*
 obs-studio
 qemu-kvm
 libvirt-clients
-libvirt-daemon-system 
+libvirt-daemon-system
 bridge-utils
 libguestfs-tools
 genisoimage

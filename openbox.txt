@@ -1,4 +1,4 @@
-openbox 
+openbox
 obconf
 obmenu
 lightdm
@@ -9,18 +9,21 @@ sxhkd
 pcmanfm
 xfce4-panel
 xfce4-whiskermenu-plugin
-network-manager network-manager-gnome
+network-manager
+network-manager-gnome
 lxappearance
 htop
 flameshot
 ubuntu-drivers-common
-xinit xorg
+xinit
+xorg
 vim
 zathura
 rofi
 compton
 leafpad
-zsh zsh-syntax-highlighting
+zsh
+zsh-syntax-highlighting
 gdebi
 curl
 dunst
