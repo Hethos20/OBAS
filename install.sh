@@ -48,12 +48,8 @@ mkdir .programs Downloads Desktop Videos Music
 mkdir -p .local/share .vim/plugged $HOME/.local/$username
 
 echo -e "\e[32mCopying dot files\e[0m"
-cd $obas/home
-cp -r .* $HOME
-cp -r Pictures $HOME
-#cp -r $obas/home/.* $HOME
-#cp -r $obas/home/Pictures $HOME
-cd $HOME
+cp -r $obas/home/.* $HOME
+cp -r $obas/home/Pictures $HOME
 
 sudo apt-get update -yy > /dev/null
 
