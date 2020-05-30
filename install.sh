@@ -58,15 +58,12 @@ sudo apt-get update -yy > /dev/null
 
 let "stage++"
 echo -e "\e[32mInstalling Openbox\e[0m"
-while IFS= read -r opbx; do echo "$opbx"; done < $obas/openbox.txt
+mapfile -t opbx < "$obas/openbox.txt"
 	
 	sudo apt-get install software-properties-common -yy > /dev/null
 	sudo add-apt-repository ppa:mmstick76/alacritty
 
-	for item in ${opbx[*]}
-	do
-		sudo apt-get install $item -yy > /dev/null
-	done
+	sudo apt-get install "${opbx[@]}" -yy
 
 	cd .programs
 	wget --quiet "https://download-installer.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-78.0a1.en-US.linux-x86_64.tar.bz2" -O firefox.tar.bz2
