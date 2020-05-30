@@ -4,4 +4,12 @@ openjdk-8-jre-headless
 calibre
 retroarch*
 obs-studio
-qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils libguestfs-tools genisoimage virtinst libosinfo-bin virt-manager
+qemu-kvm
+libvirt-clients
+libvirt-daemon-system 
+bridge-utils
+libguestfs-tools
+genisoimage
+virtinst
+libosinfo-bin
+virt-manager
