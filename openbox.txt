@@ -1,4 +1,5 @@
-openbox obconf
+openbox
+obconf
 obmenu
 lightdm
 lightdm-gtk-greeter
