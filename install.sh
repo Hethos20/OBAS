@@ -5,12 +5,13 @@ part=0
 username=whoami
 obas=$HOME/OBAS
 
+install_from_list() {
+	mapfile -t pkgs < "$1"
+	sudo apt-get install "${pkgs[@]}" -yy	
+}
+
 install_essentials () {
-	while IFS= read -r ess; do echo "$ess"; done < $obas/essentials.txt
-	for item in ${$ess[*]}
-	do
-		sudo apt-get install $ess -yy > /dev/null
-	done
+	install_from_list "$obas/essentials.txt"
 }
 
 install_extras () {
@@ -18,12 +19,7 @@ install_extras () {
 	sudo add-apt-repository ppa:libretro/stable -y >/dev/null
 	sudo apt-get update -yy > /dev/null
 
-	while IFS= read -r extras; do echo "$extras"; done < $obas/extras.txt
-
-	for item in ${$extras[*]}
-	do
-		sudo apt-get install $extras -yy > /dev/null
-	done
+	install_from_list "$obas/extras.txt"
 
 	wget --quiet "https://discordapp.com/api/download?platform=linux&format=deb" -O discord.deb
 	sudo gdebi discord.deb --n >/dev/null
@@ -58,12 +54,11 @@ sudo apt-get update -yy > /dev/null
 
 let "stage++"
 echo -e "\e[32mInstalling Openbox\e[0m"
-mapfile -t opbx < "$obas/openbox.txt"
 	
 	sudo apt-get install software-properties-common -yy > /dev/null
 	sudo add-apt-repository ppa:mmstick76/alacritty
 
-	sudo apt-get install "${opbx[@]}" -yy
+	install_from_list "$obas/openbox.txt"
 
 	cd .programs
 	wget --quiet "https://download-installer.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-78.0a1.en-US.linux-x86_64.tar.bz2" -O firefox.tar.bz2
