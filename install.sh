@@ -1,7 +1,5 @@
 #!/bin/bash
 clear
-stage=0
-part=0
 username=whoami
 obas=$HOME/OBAS
 
