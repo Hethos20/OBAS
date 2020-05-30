@@ -50,7 +50,7 @@ mkdir .programs Downloads Desktop Videos Music
 mkdir -p .local/share .vim/plugged $HOME/.local/$username
 
 echo -e "\e[32mCopying dot files\e[0m"
-cp -a $obas/home/* .
+cp -r $obas/home/* $HOME
 
 sudo apt-get update -yy > /dev/null
 
