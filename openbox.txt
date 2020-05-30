@@ -15,7 +15,8 @@ lxappearance
 htop
 flameshot
 ubuntu-drivers-common
-xinit xorg
+xinit
+xorg
 vim
 zathura
 rofi
