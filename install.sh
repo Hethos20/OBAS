@@ -11,10 +11,12 @@ install_from_list() {
 }
 
 install_essentials () {
+	echo -e "\e[32mInstalling essentials\e[0m"
 	install_from_list "$obas/essentials.txt"
 }
 
 install_extras () {
+	echo -e "\e[32mInstalling extras\e[0m"
 
 	sudo add-apt-repository ppa:libretro/stable -y >/dev/null
 	sudo apt-get update -yy > /dev/null
