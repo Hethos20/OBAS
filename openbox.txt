@@ -1,6 +1,9 @@
-openbox obconf
+openbox 
+obconf
 obmenu
-lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+lightdm
+lightdm-gtk-greeter
+lightdm-gtk-greeter-settings
 feh
 sxhkd
 pcmanfm
