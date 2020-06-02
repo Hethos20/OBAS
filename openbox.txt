@@ -27,4 +27,4 @@ zsh-syntax-highlighting
 gdebi
 curl
 dunst
-alacritty
+xterm
