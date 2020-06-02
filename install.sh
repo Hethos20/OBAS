@@ -57,7 +57,6 @@ let "stage++"
 echo -e "\e[32mInstalling Openbox\e[0m"
 	
 	sudo apt-get install software-properties-common -yy > /dev/null
-	sudo add-apt-repository ppa:mmstick76/alacritty
 
 	install_from_list "$obas/openbox.txt"
 
