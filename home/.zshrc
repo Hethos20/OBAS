@@ -11,6 +11,10 @@ bindkey "^[[1;5D" backward-word
 
 #add directories to path
 export PATH=$HOME/.scripts:$PATH
+export PATH=$HOME/.games/shortcuts:$PATH
+
+#colors for lightline (vim)plugin
+export TERM=xterm-256color
 
 #load alias file
 . $HOME/.zsh_alias
