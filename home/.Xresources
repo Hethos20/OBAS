@@ -79,3 +79,20 @@ rofi.color-window: #002b37, #002b37, #003642
 rofi.color-normal: #002b37, #819396, #003643, #008ed4, #ffffff
 rofi.color-active: #002b37, #008ed4, #003643, #008ed4, #66c6ff
 rofi.color-urgent: #002b37, #da4281, #003643, #008ed4, #890661
+
+! XTERM
+
+!Fonts
+xterm*faceName: DejaVu Sans Mono
+xterm*faceSize: 14
+
+! Copy and paste stuff
+xterm*selectToClipboard: true
+xterm*VT100.Translations: #override \
+                 Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+                 Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
+
+! Background and foreground colors
+xterm*background: black
+xterm*foreground: lightgrey
+
