@@ -1,5 +1,5 @@
 # start panel
-xfce4-panel &
+lxpanel &
 
 # start network panel
 nm-applet &
