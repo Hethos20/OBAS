@@ -13,7 +13,7 @@
 		</item>
 		<item label="Terminal emulator">
 			<action name="Execute">
-				<execute>urxvt</execute>
+				<execute>uxterm</execute>
 			</action>
 		</item>
 		<item label="Web browser">
@@ -44,8 +44,5 @@
 			</item>
 		</menu>
 		<separator/>
-		<item label="Exit">
-			<action name="Exit"/>
-		</item>
 	</menu>
 </openbox_menu>
