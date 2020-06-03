@@ -1,10 +1,8 @@
 set wrap!
-
 set number
-
 set laststatus=2
-filetype indent on
 
+filetype indent on
 
 call plug#begin('$HOME/.vim/plugged')
 
