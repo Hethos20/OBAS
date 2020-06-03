@@ -10,9 +10,9 @@ alt + t
 super + e
 	pcmanfm
 
-#whisker menu
+#Application menu
 alt + F1
-	xfce4-popup-whiskermenu 
+	lxpanelctl menu
 
 #Mute audio
 XF86AudioMute
