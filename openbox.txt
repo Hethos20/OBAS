@@ -7,8 +7,7 @@ lightdm-gtk-greeter-settings
 feh
 sxhkd
 pcmanfm
-xfce4-panel
-xfce4-whiskermenu-plugin
+lxpanel
 network-manager
 network-manager-gnome
 lxappearance
