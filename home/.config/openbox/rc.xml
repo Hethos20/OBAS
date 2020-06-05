@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>E5150-Green</name>
+    <name>Neon_Knights_Orange_Ob</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -58,7 +58,7 @@
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
       <name>sans</name>
-      <size>15</size>
+      <size>8</size>
       <!-- font size in points -->
       <weight>bold</weight>
       <!-- 'bold' or 'normal' -->
@@ -120,7 +120,7 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>5</number>
+    <number>3</number>
     <firstdesk>1</firstdesk>
     <names>
       <name>1</name>
@@ -302,81 +302,88 @@
       </action>
     </keybind>
     <!-- Keyboard: Window Size Manipulation -->
-	<keybind key="W-S-Left">
-      		<action name="MoveResizeTo">
-        		<monitor>1</monitor>
-      		</action>
-    	</keybind>
-    
-	 <keybind key="W-S-Right">
-      		<action name="MoveResizeTo">
-        		<monitor>2</monitor>
-      		</action>
-    	</keybind>
-
+    <keybind key="W-S-Left">
+      <action name="MoveResizeTo">
+        <monitor>1</monitor>
+      </action>
+    </keybind>
+    <keybind key="W-S-Right">
+      <action name="MoveResizeTo">
+        <monitor>2</monitor>
+      </action>
+    </keybind>
     <keybind key="W-Up">
       <action name="Maximize"/>
     </keybind>
     <keybind key="W-Down">
       <action name="Iconify"/>
     </keybind>
-    
-	<keybind key="W-A-x">
-	  <action name="Unmaximize"/>
-	  <action name="MoveResizeTo">
-	    <x>-1%</x>
-	    <y>2%</y>
-	    <width>48%</width>
-	    <height>96%</height>
-	  </action>
-	</keybind>
-	<keybind key="W-A-z">
-	  <action name="Unmaximize"/>
-	  <action name="MoveResizeTo">
-	    <x>1%</x>
-	    <y>2%</y>
-	    <width>49%</width>
-	    <height>96%</height>
-	  </action>
-	</keybind>
-
-	<keybind key="W-z">
-	  <action name="Unmaximize"/>
-	  <action name="MoveResizeTo">
-	    <x>1%</x>
-	    <y>2%</y>
-	    <height>47%</height>
-	    <width>49%</width>
-	  </action>
-	</keybind>
-	<keybind key="W-x">
-	  <action name="Unmaximize"/>
-	  <action name="MoveResizeTo">
-	    <x>-1%</x>
-	    <y>2%</y>
-	    <height>47%</height>
-	    <width>48%</width>
-	  </action>
-	</keybind>
-	<keybind key="W-c">
-	  <action name="Unmaximize"/>
-	  <action name="MoveResizeTo">
-	    <x>1%</x>
-	    <y>-2%</y>
-	    <height>47%</height>
-	    <width>49%</width>
-	  </action>
-	</keybind>
-	<keybind key="W-v">
-	  <action name="Unmaximize"/>
-	  <action name="MoveResizeTo">
-	    <x>-1%</x>
-	    <y>-2%</y>
-	    <height>47%</height>
-	    <width>48%</width>
-	  </action>
-	</keybind>
-
+    <keybind key="C-W-Down">
+      <action name="Unmaximize"/>
+    </keybind>
+    <keybind key="W-A-x">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>-0.1%</x>
+        <y>0.1%</y>
+        <width>50%</width>
+        <height>101%</height>
+      </action>
+    </keybind>
+    <keybind key="W-A-z">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>0.1%</x>
+        <y>0.1%</y>
+        <width>50%</width>
+        <height>101%</height>
+      </action>
+    </keybind>
+    <keybind key="W-z">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>0.1%</x>
+        <y>0.1%</y>
+        <height>51%</height>
+        <width>50%</width>
+      </action>
+    </keybind>
+    <keybind key="W-x">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>-0.1%</x>
+        <y>0.1%</y>
+        <height>51%</height>
+       <width>50%</width>
+      </action>
+    </keybind>
+    <keybind key="W-c">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>0.1%</x>
+        <y>-0.1%</y>
+        <height>51%</height>
+        <width>50%</width>
+      </action>
+    </keybind>
+    <keybind key="W-v">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>-0.1%</x>
+        <y>-0.1%</y>
+        <height>51%</height>
+        <width>50%</width>
+      </action>
+    </keybind>
+    <keybind key="S-A-C">
+	    <action name="Unmaximize"/>
+	    <action name="MoveResizeTo">
+		    <x>center</x>
+		    <y>center</y>
+		    <height>50%</height>
+		    <width>50%</width>
+	    </action>
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
