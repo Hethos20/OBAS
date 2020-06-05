@@ -1,17 +1,21 @@
 #!/bin/bash
 
-choice=$(echo "shutdown
-sleep 
-restart" | rofi -dmenu -p "POWER: ")
+option1="shutdown"
+option2="sleep"
+option3="reboot"
+option4="lock"
+options="$option1\n$option2\n$option3\n$option4"
+
+choice=$(echo -e "$options" | rofi -font "DejaVu Sans Mono 20" -width 30 -lines 4 -dmenu -p "POWER: ")
 
 #[[ -z $choice ]] && exit
 case "${choice}" in
-	"shutdown")
-		shutdown -P 0 ;;
-	"suspend")
-		systemctl suspend ;;
-	"restart")
-		reboot ;;
-	"test")
-		echo "test";;
+        $option1)
+                shutdown -P 0 ;;
+        $option2)
+                systemctl suspend ;;
+        $option3)
+                reboot ;;
+        $option4)
+                dm-tool lock ;;
 esac
