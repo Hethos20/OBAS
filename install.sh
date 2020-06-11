@@ -56,6 +56,13 @@ sudo apt-get update -yy > /dev/null
 let "stage++"
 echo -e "\e[32mInstalling Openbox\e[0m"
 	
+	cd $HOME/.programs
+	git clone https://github.com/dunst-project/dunst.git
+	cd dunst
+	sudo checkinstall --install=no --pkgversion 0 --pkgrelease 0 -y
+	sudo gdebi dunst_0-0_amd64.deb --n > /dev/null
+	cd $HOME
+	
 	sudo apt-get install software-properties-common -yy > /dev/null
 
 	install_from_list "$obas/openbox.txt"
