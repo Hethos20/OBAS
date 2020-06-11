@@ -1,0 +1,33 @@
+#!/bin/bash
+
+Help(){
+	printf "NAME\n\tdesktop_shortcut - Generates desktop shortcuts in the $appPath directory\n"
+	printf "\nSYNOPSIS\n\tdesktop_shortcut [executable file] [icon file] [name of category] [name]\n"
+	printf "\nCategories\n\tAccessories\n\tEductation\n\tGames\n\tGraphics\n\tInternet\n\tOffice\n\tSound & Video\n\tSystem Tools\n\tPreferences\n"
+	printf "\nExamples\n\tdesktop_shortcut start.sh icon.png Office xyz\n\tdesktop_shortcut start.sh Support/icon.png Game Rimworld"
+}
+
+appPath=$HOME/.local/share/applications/
+dir=$(pwd)
+file=$1
+icon=$2
+category=$3
+sname=$4
+
+[ -z "$*" ] && echo "No args present" && exit 0
+[ $1 == "-h" ] && Help
+
+touch $appPath/$sname.desktop
+echo "[Desktop Entry]" >> $appPath/$sname.desktop
+echo "Encoding=UTF-8" >> $appPath/$sname.desktop
+echo "Value=1.0" >> $appPath/$sname.desktop
+echo "Type=Application" >> $appPath/$sname.desktop
+echo "Name=$sname" >> $appPath/$sname.desktop
+echo "GenericName=$sname" >> $appPath/$sname.desktop
+echo "Comment=$sname" >> $appPath/$sname.desktop
+echo "Icon=$dir/$icon" >> $appPath/$sname.desktop
+echo "Exec="$dir/$file"" >> $appPath/$sname.desktop
+echo "Categories=$category;" >> $appPath/$sname.desktop
+echo "Path=$dir" >> $appPath/$sname.desktop
+
+chmod +x $appPath/$sname.desktop
