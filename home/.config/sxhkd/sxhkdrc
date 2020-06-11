@@ -16,15 +16,15 @@ alt + F1
 
 #Mute audio
 XF86AudioMute
-	amixer -q -D pulse sset Master toggle
+	amixer -q -D pulse sset Master toggle; volume.sh
 
 #Raise volume by 5
 XF86AudioRaiseVolume 
-	amixer -q -D pulse sset Master 5%+
+	amixer -q -D pulse sset Master 5%+; volume.sh
 
 #Lower volume by 5
 XF86AudioLowerVolume 
-	amixer -q -D pulse sset Master 5%-
+	amixer -q -D pulse sset Master 5%-; volume.sh
 
 #Screenshot
 Print
@@ -41,3 +41,8 @@ alt + F12
 #Power menu
 alt + ctrl + Delete
 	power.sh
+	
+#Music Player
+XF86Tools
+        qmmp
+
