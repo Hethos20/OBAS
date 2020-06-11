@@ -30,3 +30,7 @@ fi
 if [ -d "$HOME/.scripts" ] ; then
 	PATH="$HOME/.scripts:$PATH"
 fi
+
+if [ -d "$HOME/.games/shortcuts" ] ; then
+        PATH="$HOME/.games/shortcuts:$PATH"
+fi
