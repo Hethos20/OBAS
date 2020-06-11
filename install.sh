@@ -45,7 +45,9 @@ read extra
 echo -e "\e[32mCreating directories\e[0m"
 cd $HOME
 mkdir .programs Downloads Desktop Videos Music
+mkdir -p $HOME/.cache/zsh
 mkdir -p .local/share .vim/plugged $HOME/.local/$username
+touch $HOME/.cache/zsh/history
 
 echo -e "\e[32mCopying dot files\e[0m"
 cp -r $obas/home/.* $HOME
