@@ -58,6 +58,8 @@ sudo apt-get update -yy > /dev/null
 let "stage++"
 echo -e "\e[32mInstalling Openbox\e[0m"
 	
+	install_from_list "$obas/openbox.txt"
+	
 	cd $HOME/.programs
 	git clone https://github.com/dunst-project/dunst.git
 	cd dunst
@@ -66,9 +68,7 @@ echo -e "\e[32mInstalling Openbox\e[0m"
 	cd $HOME
 	
 	sudo apt-get install software-properties-common -yy > /dev/null
-
-	install_from_list "$obas/openbox.txt"
-
+	
 	cd .programs
 	wget --quiet "https://download-installer.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central/firefox-78.0a1.en-US.linux-x86_64.tar.bz2" -O firefox.tar.bz2
 	tar -xf firefox.tar.bz2
