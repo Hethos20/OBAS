@@ -9,5 +9,6 @@ Go to the directory and run the install.sh file
 if z=$(curl -s 'https://install.zerotier.com/' | gpg); then echo "$z" | sudo bash; fi
 
   - curl -fLo ~/.vim/autoload/plug.vim --create-dirs \\
+  
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     - :PlugInstall
