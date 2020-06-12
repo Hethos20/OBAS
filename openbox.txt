@@ -1,6 +1,5 @@
 openbox
 obconf
-obmenu
 lightdm
 lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
